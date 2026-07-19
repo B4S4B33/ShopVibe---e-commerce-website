@@ -1,6 +1,6 @@
 # ShopVibe
 
-A minimalist ecommerce storefront built with vanilla HTML, CSS, and JavaScript, served by an Express.js backend. Designed for deployment on Render.
+A ecommerce storefront built with vanilla HTML, CSS, and JavaScript, served by an Express.js backend. Designed for deployment on Render.
 
 ## Pages
 
@@ -49,13 +49,6 @@ ecom/
 - **Images:** Unsplash URLs
 - **Storage:** localStorage for cart, sign-in state, and preferences
 
-## Deployment (Render)
-
-1. Push this repo to GitHub
-2. Create a new Web Service on Render
-3. Set build command: `npm install`
-4. Set start command: `npm start`
-5. Render sets `PORT` automatically — the server uses `process.env.PORT`
 
 ## Features
 
