@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopVibe — Everyday Essentials</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">Shop<span>Vibe</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="admin.html">Dashboard</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="signin.html">Sign In</a>
+      <a href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <img class="hero-bg" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400&h=600&fit=crop" alt="Store interior">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Find What You Love</h1>
+    <p>Simple, well-made products for everyday life. Curated with care, delivered with speed.</p>
+    <a href="shop.html" class="btn btn-primary">Browse Collection</a>
+  </div>
+</div>
+
+<section>
+  <h2 class="section-title">Staff Picks</h2>
+  <p class="section-sub">Handpicked by our team for you.</p>
+  <div class="featured-grid" id="staffPicksGrid"></div>
+</section>
+
+<div class="lifestyle-section">
+  <div class="lifestyle-card">
+    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=400&fit=crop" alt="Everyday style">
+    <div class="lifestyle-card-content">
+      <h3>Everyday Essentials</h3>
+      <p>Build a wardrobe that works as hard as you do.</p>
+      <a href="shop.html?cat=clothing" class="btn btn-primary">Shop Clothing</a>
+    </div>
+  </div>
+  <div class="lifestyle-card">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop" alt="Tech setup">
+    <div class="lifestyle-card-content">
+      <h3>Tech That Works</h3>
+      <p>Simple gadgets that make life easier.</p>
+      <a href="shop.html?cat=electronics" class="btn btn-primary">Shop Electronics</a>
+    </div>
+  </div>
+</div>
+
+<section class="testimonial-section" style="max-width:100%; padding-left:0; padding-right:0;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 40px;">
+    <h2 class="section-title" style="text-align:center;">What Our Customers Say</h2>
+    <p class="section-sub" style="text-align:center;">Real reviews from real people.</p>
+    <div class="testimonial-grid" id="testimonialGrid"></div>
+  </div>
+</section>
+
+<div class="newsletter-section">
+  <h2>Stay in the Loop</h2>
+  <p>Get early access to new arrivals and exclusive deals.</p>
+  <div class="newsletter-form">
+    <input type="email" placeholder="Your email address">
+    <button onclick="showToast('Thanks for subscribing!')">Subscribe</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>ShopVibe</h4>
+      <p>A small store for people who like nice things without the fuss.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html">All Products</a></li>
+        <li><a href="shop.html?cat=clothing">Clothing</a></li>
+        <li><a href="shop.html?cat=electronics">Electronics</a></li>
+        <li><a href="shop.html?cat=home">Home</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Account</h4>
+      <ul>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Wishlist</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 ShopVibe. All rights reserved.
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+<script>
+  renderTrending();
+  renderNewArrivals();
+  renderTestimonials();
+  renderBestSellers();
+  renderStaffPicks();
+  updateCartCount();
+</script>
+</body>
+</html>

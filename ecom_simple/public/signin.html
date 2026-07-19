@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — ShopVibe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">Shop<span>Vibe</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="admin.html">Dashboard</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="signin.html">Sign In</a>
+      <a href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<div class="signin-page">
+  <h1>Welcome back</h1>
+  <p class="subtitle">Sign in to your ShopVibe account</p>
+
+  <form id="signinForm" onsubmit="handleSignIn(event)">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+    </div>
+    <div class="form-options">
+      <label><input type="checkbox" checked> Remember me</label>
+      <a href="#">Forgot password?</a>
+    </div>
+    <button type="submit" class="signin-btn">Sign In</button>
+  </form>
+
+  <div class="divider"><span>or</span></div>
+
+  <div class="social-btns">
+    <button class="social-btn">Continue with Google</button>
+    <button class="social-btn">Continue with Apple</button>
+  </div>
+
+  <p class="signup-link">Don't have an account? <a href="#">Create one</a></p>
+</div>
+
+<footer class="footer" style="margin-top: 80px;">
+  <div class="footer-bottom">&copy; 2026 ShopVibe. All rights reserved.</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+<script>
+  updateCartCount();
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — ShopVibe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">Shop<span>Vibe</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="admin.html">Dashboard</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="signin.html">Sign In</a>
+      <a href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<div class="breadcrumb" id="breadcrumb"></div>
+
+<section>
+  <div class="product-detail" id="productDetail"></div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><h4>ShopVibe</h4><p>A small store for people who like nice things without the fuss.</p></div>
+    <div><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li><li><a href="shop.html?cat=clothing">Clothing</a></li><li><a href="shop.html?cat=electronics">Electronics</a></li><li><a href="shop.html?cat=home">Home</a></li></ul></div>
+    <div><h4>Help</h4><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
+    <div><h4>Account</h4><ul><li><a href="signin.html">Sign In</a></li><li><a href="#">Orders</a></li><li><a href="#">Wishlist</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 ShopVibe. All rights reserved.</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+<script>
+  renderProductDetail();
+  updateCartCount();
+</script>
+</body>
+</html>

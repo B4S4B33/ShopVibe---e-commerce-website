@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — ShopVibe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">Shop<span>Vibe</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="admin.html">Dashboard</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="signin.html">Sign In</a>
+      <a href="cart.html">Cart <span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-header">
+      <h3>Admin Panel</h3>
+      <p>ShopVibe Store</p>
+    </div>
+    <ul class="admin-nav">
+      <li><a href="#" class="active">&#128202; Overview</a></li>
+      <li><a href="#orders-section">&#128230; Orders</a></li>
+      <li><a href="#products-section">&#128722; Products</a></li>
+      <li><a href="index.html">&#127968; View Store</a></li>
+    </ul>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-header">
+      <h1>Overview</h1>
+      <span class="date">July 2026</span>
+    </div>
+
+    <div class="stat-cards" id="adminStats"></div>
+
+    <div id="orders-section">
+      <div class="admin-section">
+        <div class="admin-section-header">
+          <h2>Recent Orders</h2>
+          <span class="view-all">View All</span>
+        </div>
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Total</th>
+              <th>Items</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="adminOrders"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="products-section">
+      <div class="admin-section">
+        <div class="admin-section-header">
+          <h2>Products</h2>
+          <span class="view-all">Manage</span>
+        </div>
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Compare</th>
+              <th>Tag</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="adminProducts"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+<script>
+  renderAdmin();
+  updateCartCount();
+</script>
+</body>
+</html>
