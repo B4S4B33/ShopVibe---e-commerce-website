@@ -1,6 +1,6 @@
 # ShopVibe
 
-A ecommerce storefront built with vanilla HTML, CSS, and JavaScript, served by an Express.js backend. Designed for deployment on Render.
+A ecommerce storefront built with  HTML, CSS, and JavaScript, served by an Express.js backend. Designed for deployment on Render.
 
 ## Pages
 
@@ -43,7 +43,7 @@ ecom/
 
 ## Tech Stack
 
-- **Frontend:** Vanilla HTML, CSS, JavaScript (no frameworks)
+- **Frontend:**  HTML, CSS, JavaScript 
 - **Backend:** Express.js (static file serving)
 - **Data:** Client-side JS arrays (no database)
 - **Images:** Unsplash URLs
